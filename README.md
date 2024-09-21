@@ -622,6 +622,7 @@ sudo systemctl status grafana-server
 ```
 
 **Step 7: Access Grafana Web Interface:**
+- before accessing grafana web interface we should add an inbound rule to allow access to port 3000
 
 Open a web browser and navigate to Grafana using your server's IP address. The default port for Grafana is 3000. For example:
 
