@@ -676,6 +676,18 @@ That's it! You've successfully installed and set up Grafana to work with Prometh
 
 2. **Configure Prometheus Plugin Integration:**
     - Integrate Jenkins with Prometheus to monitor the CI/CD pipeline.
+      - Install and configure Prometheus plugin for Jenkins:
+            * In your Jenkins instance, go to "Manage Jenkins" > "Manage Plugins" > "Available" tab and search for "Prometheus Metrics Plugin". Install and activate the plugin.
+      - Enable Prometheus metrics in Jenkins:
+            * add the following line to /etc/default/jenkins
+             ```bash
+                JENKINS_ARGS="--httpPort=<JENKINS_HTTP_PORT> --httpListenAddress=<JENKINS_HOSTNAME> --enableMetrics --prefix=/prometheus"
+             ```
+             * Then restart Jenkins
+              ```bash
+                sudo systemctl restart jenkins
+                sudo systemctl status jenkins
+             ```
 
 
 **Phase 5: Notification**
