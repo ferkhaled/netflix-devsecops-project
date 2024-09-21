@@ -557,6 +557,7 @@ sudo systemctl restart jenkins
    ```
 
    You can access Prometheus targets at:
+   # A new rule should be added to inbound traffic to accept traffic from 0.0.0.0/0 to port 9090
 
    `http://<your-prometheus-ip>:9090/targets`
 
